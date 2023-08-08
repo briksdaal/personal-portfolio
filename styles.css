@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+body {
+    position: relative;
+}
+
 h1,
 h2,
 h3,
@@ -27,7 +31,6 @@ h1 {
   font-size: var(--h1-size);
   color: white;
   text-shadow: 0 3px 8px #0000008a;
-  max-width: 300px;
 }
 
 h2 {
@@ -41,6 +44,7 @@ p {
 }
 
 header {
+    min-height: 540px;
   padding: 30px 30px 0 30px;
   overflow: hidden;
   position: relative;
@@ -66,6 +70,14 @@ header:before {
   border-color: #0890b1 transparent transparent transparent;
 }
 
+.header-img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px;
+
+}
+
 .header-img-container img {
   width: 100%;
   height: 500px;
@@ -73,9 +85,11 @@ header:before {
 }
 
 header h1 {
+    max-width: 300px;
   position: absolute;
-  bottom: 0;
-  left: 10px;
+  left: 40px;
+  bottom: 10px;
+  z-index: 5;
 }
 
 .about p {
@@ -97,8 +111,10 @@ header h1 {
 }
 
 .screenshot {
+    padding: 20px;
   height: 300px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -191,4 +207,25 @@ header h1 {
 .contact-me img {
   width: 100%;
   display: block;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    header:before {
+        border-width: 500px 1800px 0 0;
+    }
+
+    .header-img-container img {
+        width: 50%;
+        height: 450px;
+        object-fit: cover;
+    }
+
+    header h1 {
+        top: 0;
+        right: 0;
+        max-width: unset;
+        bottom: unset;
+        left: unset;
+        
+    }
 }
