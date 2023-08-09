@@ -16,7 +16,7 @@
 }
 
 body {
-    position: relative;
+  position: relative;
 }
 
 h1,
@@ -43,15 +43,30 @@ p {
   font-size: var(--regular-text);
 }
 
+.img-container {
+    position: relative;
+}
+
+.img-container:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #3c3c3c36;
+}
+
 header {
-    min-height: 540px;
-  padding: 30px 30px 0 30px;
+  min-height: 540px;
+  padding-top: 30px;
   overflow: hidden;
   position: relative;
 }
 
 section {
-  padding: 0 20px 60px;
+  margin: 0 20px 60px;
 }
 
 .inner-header {
@@ -70,22 +85,21 @@ header:before {
   border-color: #0890b1 transparent transparent transparent;
 }
 
-.header-img-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 30px;
-
+.about-img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px;
 }
 
-.header-img-container img {
+.about-img-container img {
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
 
 header h1 {
-    max-width: 300px;
+  max-width: 300px;
   position: absolute;
   left: 40px;
   bottom: 10px;
@@ -93,7 +107,7 @@ header h1 {
 }
 
 .about p {
-    line-height: 44px;
+  line-height: 44px;
   padding-bottom: 20px;
 }
 
@@ -111,7 +125,7 @@ header h1 {
 }
 
 .screenshot {
-    padding: 20px;
+  padding: 20px;
   height: 300px;
   display: flex;
   justify-content: center;
@@ -173,7 +187,7 @@ header h1 {
 }
 
 .contact-me {
-  padding: 0;
+  margin: 0;
   color: #fff;
   background: #0891b2;
 }
@@ -183,20 +197,20 @@ header h1 {
 }
 
 .text-container > p:first-of-type {
-    line-height: 44px;
-    font-size: var(--regular-text);
+  line-height: 44px;
+  font-size: var(--regular-text);
 }
 
 .text-container p {
-    font-size: var(--desc-text);
+  font-size: var(--desc-text);
 }
 
 .text-container .address {
-    padding: 30px 0;
+  padding: 30px 0;
 }
 
 .text-container .mdi {
-    display: none;
+  display: none;
 }
 
 .text-container .icons {
@@ -210,22 +224,61 @@ header h1 {
 }
 
 @media screen and (min-width: 600px) and (max-width: 1200px) {
-    header:before {
-        border-width: 500px 1800px 0 0;
-    }
+  section {
+    margin: 0 80px 60px;
+  }
 
-    .header-img-container img {
-        width: 50%;
-        height: 450px;
-        object-fit: cover;
-    }
+  header:before {
+    border-width: 500px 1800px 0 0;
+  }
 
-    header h1 {
-        top: 0;
-        right: 0;
-        max-width: unset;
-        bottom: unset;
-        left: unset;
-        
-    }
+  header h1 {
+    top: 30px;
+    max-width: unset;
+    bottom: unset;
+    left: 40%;
+  }
+
+  .about {
+    position: absolute;
+    top: 160px;
+    background: #fff;
+    box-shadow: 2px 2px 15px #7474748b;
+  }
+
+  .about h2 {
+    margin-right: 30px;
+  }
+
+  .about-img-container {
+    margin-right: 30px;
+    margin-left: -40px;
+    margin-top: -120px;
+    width: calc(50% + 40px);
+    max-width: unset;
+    padding: 0;
+    position: unset;
+    float: left;
+    box-shadow: 2px 2px 8px #74747461;
+  }
+
+
+  .about-img-container:after {
+    margin-right: 30px;
+    margin-left: -40px;
+    margin-top: -120px;
+    height: 350px;
+    width: calc(50% + 40px);
+  }
+
+  .about-img-container img {
+    height: 350px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .about p {
+    padding: 0 30px;
+  }
+
 }
