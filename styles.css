@@ -7,6 +7,7 @@
   --h3-size: 1.3rem;
   --regular-text: 1.3rem;
   --desc-text: 1rem;
+  --header-triangle-width: 200vw;
 }
 
 * {
@@ -48,6 +49,11 @@ p {
   position: relative;
 }
 
+.img-container img {
+  width: 100%;
+  display: block;
+}
+
 .img-container:after {
   display: block;
   position: absolute;
@@ -82,7 +88,7 @@ header:before {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 500px 800px 0 0;
+  border-width: 500px var(--header-triangle-width) 0 0;
   border-color: #0890b1 transparent transparent transparent;
 }
 
@@ -90,7 +96,7 @@ header:before {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 30px;
+  margin: 30px;
 }
 
 .about-img-container img {
@@ -219,21 +225,19 @@ header h1 {
   color: #000;
 }
 
-.contact-me img {
-  width: 100%;
-  display: block;
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  header {
+    min-height: 600px;
+  }
 }
 
-@media screen and (min-width: 600px) and (max-width: 1200px) {
+@media screen and (min-width: 700px) and (max-width: 1200px) {
   section {
     margin: 0 80px 60px;
   }
 
-  header:before {
-    border-width: 500px 1800px 0 0;
-  }
-
   header h1 {
+    font-size: 3rem;
     top: 30px;
     max-width: unset;
     bottom: unset;
@@ -262,22 +266,13 @@ header h1 {
     width: calc(50% + 40px);
     max-width: unset;
     padding: 0;
-    position: unset;
+    position: relative;
     float: left;
     box-shadow: 2px 2px 8px #74747461;
   }
 
-  .about-img-container:after {
-    margin-right: 30px;
-    margin-left: -40px;
-    margin-top: -120px;
-    height: 350px;
-    width: calc(50% + 40px);
-  }
-
   .about-img-container img {
     height: 350px;
-    display: block;
     object-fit: cover;
     box-shadow: 2px 2px 8px #74747461;
   }
@@ -355,6 +350,151 @@ header h1 {
   .text-container .mdi {
     display: inline-block;
     font-size: 1.2rem;
+    padding-right: 10px;
+  }
+
+  .text-container .icons {
+    justify-content: left;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  h2 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  section {
+    margin: 0 80px 60px;
+  }
+
+  header {
+    position: absolute;
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+    max-width: unset;
+    bottom: 100px;
+    left: 90px;
+  }
+
+  .about {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .about-img-container {
+    position: relative;
+    margin: 0;
+    box-shadow: 2px 2px 8px #74747461;
+  }
+
+  .about-img-container img {
+    width: 380px;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 2px 2px 8px #74747461;
+  }
+
+  .about-text-container {
+    position: relative;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: auto auto 1fr;
+    align-items: start;
+    padding: 0 20px 20px 20px;
+    height: 330px;
+    background: #fff;
+    box-shadow: 2px 2px 15px #7474748b;
+  }
+
+  .about h2 {
+}
+
+  .about p {
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+  }
+
+  .about .icons {
+    justify-self: end;
+    align-self: end;
+    font-size: 1.2rem;
+  }
+  /*                    */
+
+  .work {
+    margin-top: 100px;
+  }
+
+  .work h2 {
+    text-align: left;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+  }
+
+  .screenshot {
+    height: 250px;
+  }
+
+  .data h3 {
+    font-size: 0.9rem;
+    padding-left: 0;
+  }
+
+  .data .description {
+    font-size: 0.75rem;
+  }
+
+  .data .icons {
+    font-size: 1rem;
+  }
+
+  .contact-me {
+    display: flex;
+    gap: 30px;
+    padding: 50px;
+  }
+
+  .text-container {
+    padding: 0;
+    flex: 1;
+  }
+
+  .footer-img-container {
+    max-width: 650px;
+  }
+
+  .footer-img-container img {
+    object-fit: cover;
+    object-position: 70%;
+    height: 100%;
+  }
+  .text-container > p:first-of-type {
+    font-size: 0.8rem;
+    line-height: unset;
+  }
+
+  .text-container > p:last-of-type {
+    margin-top: 8px;
+  }
+
+  .text-container p {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+
+  .text-container .mdi {
+    display: inline-block;
+    font-size: 1.1rem;
     padding-right: 10px;
   }
 
