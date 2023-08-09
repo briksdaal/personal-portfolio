@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap");
 
 :root {
-  --h1-size: 84px;
-  --h2-size: 42px;
-  --h3-size: 28px;
-  --regular-text: 28px;
-  --desc-text: 22px;
+  font-size: 22px;
+  --h1-size: 4rem;
+  --h2-size: 2rem;
+  --h3-size: 1.3rem;
+  --regular-text: 1.3rem;
+  --desc-text: 1rem;
 }
 
 * {
@@ -115,7 +116,7 @@ header h1 {
   display: flex;
   gap: 30px;
   justify-content: center;
-  font-size: 40px;
+  font-size: 1.8rem;
 }
 
 .project {
@@ -177,7 +178,7 @@ header h1 {
 
 .data .icons {
   gap: 20px;
-  font-size: 30px;
+  font-size: 1.2rem;
 }
 
 .data .description {
@@ -250,6 +251,10 @@ header h1 {
     margin-right: 30px;
   }
 
+  .about p {
+    font-size: 0.9rem;
+  }
+
   .about-img-container {
     margin-right: 30px;
     margin-left: -40px;
@@ -261,7 +266,6 @@ header h1 {
     float: left;
     box-shadow: 2px 2px 8px #74747461;
   }
-
 
   .about-img-container:after {
     margin-right: 30px;
@@ -275,10 +279,48 @@ header h1 {
     height: 350px;
     display: block;
     object-fit: cover;
+    box-shadow: 2px 2px 8px #74747461;
   }
 
   .about p {
     padding: 0 30px;
   }
+
+  .about .icons {
+    display: none;
+  }
+
+  .work {
+    margin-top: 60px;
+  }
+
+  .work h2 {
+    text-align: left;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+  }
+
+  .screenshot {
+    height: 250px;
+  }
+
+  .data h3 {
+    font-size: 1rem;
+    padding-left: 0;
+  }
+
+  .data .description {
+    font-size: 0.8rem;
+  }
+
+  .data .icons {
+    font-size: 1rem;
+  }
+
+
 
 }
