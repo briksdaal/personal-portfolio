@@ -316,7 +316,7 @@ header h1 {
     font-size: 1rem;
   }
 
-  .contact-me {
+  .inner-contact-me {
     display: flex;
     gap: 30px;
     padding: 50px;
@@ -325,6 +325,10 @@ header h1 {
   .text-container {
     padding: 0;
     flex: 1;
+  }
+
+  .contact-me h2 {
+    text-align: left;
   }
 
   .footer-img-container {
@@ -412,7 +416,7 @@ header h1 {
   }
 
   .about h2 {
-}
+  }
 
   .about p {
     font-size: 0.75rem;
@@ -457,10 +461,10 @@ header h1 {
     font-size: 1rem;
   }
 
-  .contact-me {
+  .inner-contact-me {
     display: flex;
     gap: 30px;
-    padding: 50px;
+    padding: 50px 80px;
   }
 
   .text-container {
@@ -500,5 +504,30 @@ header h1 {
 
   .text-container .icons {
     justify-content: left;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1601px) {
+  header h1 {
+    left: calc(50% - 690px);
+  }
+
+  .about,
+  .work {
+    width: 1400px;
+    margin: 0 auto 60px;
+  }
+
+  .contact-me {
+    padding: 0;
+  }
+
+  .inner-contact-me {
+    width: 1400px;
+    padding: 50px 0;
+    margin: 60px auto 0;
+    display: flex;
+    gap: 30px;
   }
 }
